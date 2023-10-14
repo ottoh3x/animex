@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .txt-primary {
+    @apply text-[#e11d48];
+  }
+}
+
+.Toastify__toast-theme--light {
+  background-color: #141414e1 !important;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.75) 100%);
+  box-shadow: rgb(213, 1, 91) 0px 0px 0px 0px inset;
+  transition: all 0.2s ease 0s;
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb));
+  background: #212121; */
+}
+
+.search-container {
+  transition: width 0.3s ease-in-out; /* Transition the width property over 0.3 seconds with ease-in-out timing function */
+}
+
+.open-button {
+  width: 300px; /* Initial width when open */
+  transition: width 0.3s ease-in-out; /* Apply transition specifically for the width property */
+}
+
+.closed-button {
+  width: 30px; /* Initial width when closed */
+  transition: width 0.3s ease-in-out; /* Apply transition specifically for the width property */
+  overflow: hidden;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5 !important;
+}
+
+.swiper-wrapper {
+  padding: 10px 0 0 0 !important;
+}
+
+.swiper-slide {
+  margin-top: 0 !important;
+}
+
+.tool::after {
+  line-height: 1.25em;
+  position: absolute;
+  content: attr(aria-label);
+  bottom: 100%;
+  left: 50%;
+  z-index: 999999;
+  margin-bottom: 0.5em;
+  white-space: nowrap;
+  background: #2b2929;
+  transform: translate(-50%, 10px) scale(0.8);
+  transform-origin: 50% 100%;
+  color: white;
+  opacity: 0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: transform 0.2s ease 0.1s, opacity 0.2s ease 0.1s;
+  pointer-events: none;
+  font-size: 0.75em;
+}
+
+.tool:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.syno::after {
+  content: "";
+  position: absolute;
+  background: var(--bg-image);
+  top: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  bottom: 0;
+  opacity: 0.15;
+  background-position: center;
+}
+
+.sw .swiper-slide-next {
+  opacity: 0.5 !important;
+}
+
+.sw .swiper-slide-prev {
+  opacity: 0.5 !important;
+}
+
+.swiper-pagination {
+  opacity: 0 !important;
+}
